@@ -83,12 +83,14 @@ const menu = [
 
 const sectionCenter = document.querySelector(".section-center");
 const btnContainer = document.querySelector(".btn-container");
+
 // display all items when page loads
 window.addEventListener("DOMContentLoaded", function () {
   diplayMenuItems(menu);
   displayMenuButtons();
 });
 
+// Function to map the menu items into HTML and display it
 function diplayMenuItems(menuItems) {
   let displayMenu = menuItems.map(function (item) {
 
@@ -109,6 +111,8 @@ function diplayMenuItems(menuItems) {
 
   sectionCenter.innerHTML = displayMenu;
 }
+
+// Function to take the category value of the menu items and display them as cateogies with the use of buttons
 function displayMenuButtons() {
   const categories = menu.reduce(
     function (values, item) {
